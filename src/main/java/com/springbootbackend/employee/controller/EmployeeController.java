@@ -54,7 +54,7 @@ public class EmployeeController {
     }
 
     //Delete Employee
-    @DeleteMapping("/employee/{id}")
+    @DeleteMapping("/employees/{id}")
     public ResponseEntity <String> deleteEmployee(@PathVariable Long id) {
         employeeRepository.findById(id).
                 orElseThrow(() -> new ResourceNotFoundException("Employee not found by id" +id));
